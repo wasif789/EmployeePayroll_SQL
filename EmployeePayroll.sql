@@ -37,3 +37,11 @@ select name,salary from employee_payroll where name='Karthick';
 
 select name,salary from employee_payroll where startDate between ('2021-02-01') and getdate();
 -----------------------------------------------------------------
+------------------UC6 Altered the table to add gender column---------------------
+
+alter table employee_payroll add Gender char(1);
+
+update employee_payroll set Gender='M' where name='Ashok' or name='Karthick';
+
+update employee_payroll set Gender='F' where name='Gayatri' or name='Divya';
+--------------------------------------------------------------
