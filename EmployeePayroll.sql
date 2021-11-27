@@ -45,3 +45,19 @@ update employee_payroll set Gender='M' where name='Ashok' or name='Karthick';
 
 update employee_payroll set Gender='F' where name='Gayatri' or name='Divya';
 --------------------------------------------------------------
+-------------------UC7 Using Aggregate Functions and GroupBy--------------------------------
+
+select sum(salary) as TotalSalary from employee_payroll;
+
+select sum(salary)as TotalSalary ,gender  from employee_payroll where Gender='F' group by Gender;
+
+select sum(salary)as TotalSalary,gender from employee_payroll group by Gender;
+
+select avg(salary)as TotalSalary,gender  from employee_payroll group by Gender;
+
+select min(salary) as minSalary ,gender from employee_payroll   group by gender;
+
+select count(salary) as CountofGender ,gender from employee_payroll   group by gender;
+
+select max(salary) as maxSalary ,gender from employee_payroll   group by gender;
+---------------------------------------------------------
