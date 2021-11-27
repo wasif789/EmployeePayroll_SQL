@@ -89,3 +89,26 @@ update employee_payroll set Address='Hyderbad' where name='Divya';
 
 select * from employee_payroll;
 ---------------------------------------------------------------------
+--------------------UC9 Extended with basic pay, deductions, taxablepay,incometax,netpay--------------------
+
+
+Exec sp_rename 'employee_payroll.salary','Basic Pay','COLUMN';
+
+alter table employee_payroll add Deductions float,TaxablePay float,IncomeTax float,NetPay float;
+
+update employee_payroll set Deductions=2000 where Department='HR';
+update employee_payroll set Deductions=1200 where Department='Product development';
+update employee_payroll set Deductions=1770 where Department='Business development' ;
+update employee_payroll set Deductions=1112 where Department='Research development';
+
+
+update employee_payroll set NetPay=65500 where name='Ashok';
+update employee_payroll set NetPay=45300 where name='Gayatri';
+update employee_payroll set NetPay=56900 where name='Karthick';
+update employee_payroll set NetPay=62430 where name='Divya';
+
+
+update employee_payroll set IncomeTax=1500;
+
+update employee_payroll set TaxablePay=500;
+---------------------------------------------------------------------------
