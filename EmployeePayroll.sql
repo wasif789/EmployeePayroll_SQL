@@ -112,3 +112,9 @@ update employee_payroll set IncomeTax=1500;
 
 update employee_payroll set TaxablePay=500;
 ---------------------------------------------------------------------------
+--------------------UC10 Redundancy---------------------------
+
+Insert into employee_payroll values('Ashok',70000,'2021-05-15','ashok32@gmail.com','M',8945125478,'HR','Chennai',2000,500,1500,65500);
+
+select * from employee_payroll; 
+------------------------------------------------------------------
